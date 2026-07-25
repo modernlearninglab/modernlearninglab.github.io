@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renée Duncan | Project Portfolio Summary</title>
+<meta name="description" content="Project portfolio summary for Renée Duncan, Contract Project Manager for learning experience design. Updated July 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200..800;1,300..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#031634;
+  --teal:#123649;
+  --gold:#CDB380;
+  --beige:#E8DDCB;
+  --lightgray:#E1E1E1;
+  --gray:#919191;
+  --coral:#CD8380;
+  --white:#ffffff;
+  --ink:#0d2137;
+  --ink-soft:#3d5468;
+  --onnavy-soft:#b9c6d3;
+  --shell:#f7f4ee;
+  --rule:rgba(3,22,52,.14);
+  --maxw:1180px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--shell);
+  color:var(--ink);
+  font-family:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-weight:400;
+  font-size:16px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;}
+a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(18,54,73,.3);transition:color .18s ease,border-color .18s ease;}
+a:hover{color:var(--navy);border-color:var(--navy);}
+a:focus-visible,button:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:2px;
+  box-shadow:0 0 0 5px var(--navy);
+  border-radius:2px;
+}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--gold);color:var(--navy);
+  font-size:.85rem;font-weight:600;letter-spacing:.02em;
+  padding:12px 20px;border:0;
+}
+.skip:focus{left:16px;top:12px;color:var(--navy);}
+
+/* ---------- shared type ---------- */
+.eyebrow{
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.22em;
+  color:var(--gold);
+  margin:0 0 18px;
+}
+.eyebrow-dark{color:var(--teal);opacity:.85;}
+h1,h2,h3,h4{font-weight:600;line-height:1.12;letter-spacing:-.02em;margin:0;}
+h2{font-size:clamp(1.75rem,3.4vw,2.45rem);}
+h3{font-size:1.32rem;}
+h4{font-size:1.02rem;letter-spacing:0;}
+.lede{font-size:clamp(1.02rem,1.5vw,1.14rem);color:var(--ink-soft);font-weight:300;max-width:66ch;}
+
+/* ---------- nav ---------- */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(3,22,52,.94);
+  backdrop-filter:blur(9px);
+  border-bottom:1px solid rgba(205,179,128,.24);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:62px;padding-top:8px;padding-bottom:8px;}
+.mark{display:flex;align-items:center;gap:11px;color:var(--white);font-weight:600;font-size:.94rem;letter-spacing:-.01em;border:0;}
+.mark:hover{color:var(--white);}
+.mark .dot{width:9px;height:9px;background:var(--gold);border-radius:50%;flex:none;}
+.mark span.sub{color:var(--onnavy-soft);font-weight:300;font-size:.8rem;letter-spacing:.02em;}
+.navlinks{display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end;}
+.navlinks a{color:var(--onnavy-soft);font-size:.82rem;font-weight:500;letter-spacing:.02em;border:0;padding:4px 0;}
+.navlinks a:hover{color:var(--gold);}
+
+/* ---------- hero ---------- */
+.hero{background:var(--navy);color:var(--white);padding:104px 0 100px;position:relative;overflow:hidden;}
+.hero::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(205,179,128,.5),transparent);
+}
+.hero-lead{max-width:940px;}
+.hero h1{
+  font-size:clamp(2.6rem,7vw,5rem);
+  font-weight:200;
+  letter-spacing:-.045em;
+  line-height:1;
+  margin:0 0 30px;
+}
+.hero h1 strong{display:block;font-weight:600;color:var(--gold);}
+.hero p.intro{
+  color:#d6dfe8;font-weight:300;
+  max-width:46ch;
+  font-size:clamp(1.12rem,2.1vw,1.5rem);
+  line-height:1.45;
+  letter-spacing:-.01em;
+}
+.hero-meta{
+  border-left:2px solid var(--gold);
+  padding:4px 0 4px 20px;
+  margin-top:44px;
+  font-size:.86rem;
+  color:var(--onnavy-soft);
+  font-weight:300;
+  letter-spacing:.01em;
+}
+.hero-meta b{display:block;color:var(--white);font-weight:600;letter-spacing:.01em;margin-bottom:3px;}
+
+/* ---------- section frame ---------- */
+section{padding:88px 0;}
+.section-head{max-width:70ch;margin-bottom:48px;}
+.section-head h2{margin-bottom:16px;}
+
+/* ---------- delivery rail (signature) ---------- */
+#delivery{background:var(--teal);color:var(--white);}
+#delivery .lede{color:#cfdae2;}
+#delivery .section-head h2{color:var(--white);}
+.rail{position:relative;margin-top:10px;}
+.rail-line{
+  position:absolute;left:0;right:0;top:26px;height:1px;
+  background:rgba(255,255,255,.2);
+}
+.rail-line i{
+  position:absolute;left:0;top:0;height:1px;width:0;background:var(--gold);
+  transition:width 1.5s cubic-bezier(.2,.7,.2,1);display:block;
+}
+.rail.is-lit .rail-line i{width:100%;}
+.phases{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:0;
+  position:relative;
+}
+.phase{padding:0 22px 4px 0;position:relative;}
+.phase + .phase{padding-left:22px;border-left:1px solid rgba(255,255,255,.12);}
+.phase .num{
+  display:flex;align-items:center;justify-content:center;
+  width:52px;min-height:52px;border-radius:50%;
+  background:var(--teal);
+  border:1px solid var(--gold);
+  color:var(--gold);
+  font-size:.85rem;font-weight:600;letter-spacing:.04em;
+  position:relative;z-index:2;margin-bottom:20px;
+}
+.phase h3{font-size:1.14rem;margin-bottom:12px;color:var(--white);}
+.phase p{font-size:.86rem;color:#c6d2db;font-weight:300;line-height:1.55;margin:0 0 16px;}
+.phase .out{
+  font-size:.78rem;color:var(--gold);font-weight:500;line-height:1.5;
+  border-top:1px solid rgba(205,179,128,.3);padding-top:12px;
+}
+.phase .out b{display:block;font-weight:600;letter-spacing:.14em;font-size:.66rem;color:rgba(232,221,203,.75);margin-bottom:6px;}
+.optional{
+  margin-top:40px;
+  border:1px dashed rgba(205,179,128,.55);
+  padding:26px 28px;
+  display:grid;grid-template-columns:52px 1fr auto;gap:24px;align-items:start;
+  background:rgba(3,22,52,.35);
+}
+.optional .num{
+  width:52px;min-height:52px;border-radius:50%;
+  border:1px dashed var(--gold);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;font-weight:600;margin:0;
+}
+.optional h3{font-size:1.14rem;color:var(--white);margin-bottom:10px;}
+.optional p{font-size:.86rem;color:#c6d2db;font-weight:300;margin:0 0 12px;max-width:70ch;}
+.optional .out{font-size:.78rem;color:var(--gold);font-weight:500;border:0;padding:0;}
+.optional .out b{display:block;font-weight:600;letter-spacing:.14em;font-size:.66rem;color:rgba(232,221,203,.75);margin-bottom:5px;}
+.tag-opt{
+  align-self:center;
+  font-size:.68rem;font-weight:600;letter-spacing:.16em;
+  color:var(--navy);background:var(--gold);
+  padding:7px 14px;white-space:nowrap;
+}
+.loopback{
+  margin-top:14px;font-size:.76rem;color:var(--onnavy-soft);font-weight:300;
+  display:flex;align-items:center;gap:10px;
+}
+.loopback svg{flex:none;}
+
+/* ---------- engagements ---------- */
+#work{background:var(--shell);}
+.case{
+  background:var(--white);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--gold);
+  padding:38px 40px;
+  margin-bottom:26px;
+}
+.case-top{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:8px;}
+.case-num{font-size:.78rem;font-weight:600;letter-spacing:.18em;color:var(--teal);}
+.case h3{font-size:1.5rem;letter-spacing:-.025em;}
+.org{font-size:.83rem;color:var(--ink-soft);font-weight:500;margin:0 0 22px;letter-spacing:.01em;}
+.problem{
+  font-size:1.02rem;font-weight:300;font-style:italic;color:var(--teal);
+  border-left:2px solid var(--beige);padding-left:18px;margin:0 0 26px;max-width:68ch;
+}
+.case-body{display:grid;grid-template-columns:1.55fr .95fr;gap:44px;align-items:start;}
+.beat{margin:0 0 20px;}
+.beat:last-child{margin-bottom:0;}
+.beat h4{color:var(--teal);margin-bottom:6px;}
+.beat p{margin:0;font-size:.93rem;color:var(--ink-soft);}
+.beat.result h4{color:var(--navy);}
+.beat.result p{color:var(--ink);}
+.facts{border-top:1px solid var(--rule);}
+.facts dl{display:grid;grid-template-columns:88px 1fr;gap:0;margin:0;}
+.facts dt{
+  font-size:.68rem;font-weight:600;letter-spacing:.13em;color:var(--ink-soft);
+  padding:12px 12px 12px 0;border-bottom:1px solid var(--rule);
+}
+.facts dd{
+  margin:0;font-size:.85rem;color:var(--ink);font-weight:400;
+  padding:12px 0;border-bottom:1px solid var(--rule);line-height:1.5;
+}
+.relevance{
+  margin-top:26px;background:var(--beige);padding:20px 24px;
+}
+.relevance b{
+  display:block;font-size:.68rem;font-weight:600;letter-spacing:.16em;color:var(--teal);margin-bottom:7px;
+}
+.relevance p{margin:0;font-size:.89rem;color:var(--ink);font-weight:400;}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);margin-top:26px;border:1px solid var(--rule);}
+.metric{background:var(--white);padding:18px 20px;}
+.metric .m-fig{font-size:1.6rem;font-weight:300;letter-spacing:-.03em;color:var(--teal);line-height:1.1;}
+.metric .m-cap{font-size:.75rem;color:var(--ink-soft);font-weight:400;margin-top:6px;line-height:1.4;}
+
+/* ---------- capabilities ---------- */
+#tools{background:var(--teal);color:var(--white);}
+#tools .section-head h2{color:var(--white);}
+#tools .lede{color:#cfdae2;}
+.caps{border-top:1px solid rgba(255,255,255,.22);}
+.cap{display:grid;grid-template-columns:250px 1fr;gap:32px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.14);}
+.cap h3{color:var(--white);font-size:.95rem;letter-spacing:0;padding-top:2px;}
+.cap p{margin:0;font-size:.92rem;color:#c6d2db;font-weight:300;}
+.note{
+  margin-top:34px;border-left:3px solid var(--gold);background:rgba(3,22,52,.35);
+  padding:20px 24px;font-size:.9rem;color:#d6dfe8;font-weight:300;
+}
+.note b{display:block;font-size:.68rem;letter-spacing:.16em;color:var(--gold);font-weight:600;margin-bottom:8px;}
+
+footer{background:var(--navy);color:var(--onnavy-soft);padding:0 0 64px;}
+.footer-in{border-top:1px solid rgba(255,255,255,.14);padding-top:34px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end;}
+.footer-in .name{color:var(--white);font-size:1.3rem;font-weight:300;letter-spacing:-.02em;}
+.footer-in .tag{color:var(--gold);font-size:.83rem;font-weight:500;letter-spacing:.03em;margin-top:6px;}
+.footer-links{display:flex;gap:22px;font-size:.86rem;}
+.footer-links a{color:var(--onnavy-soft);border-bottom-color:rgba(255,255,255,.25);}
+.footer-links a:hover{color:var(--gold);}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+.rv.in{opacity:1;transform:none;}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .case-body{grid-template-columns:1fr;gap:36px;}
+  .phases{grid-template-columns:repeat(2,1fr);gap:34px 0;}
+  .phase{padding:0 20px 0 0;}
+  .phase + .phase{padding-left:20px;}
+  .phase:nth-child(odd)+.phase{border-left:1px solid rgba(255,255,255,.12);}
+  .rail-line{display:none;}
+  .metrics{grid-template-columns:repeat(2,1fr);}
+  .cap{grid-template-columns:1fr;gap:8px;}
+}
+@media (max-width:680px){
+  .wrap{padding:0 20px;}
+  .navlinks{display:none;}
+  .hero{padding:64px 0 66px;}
+  section{padding:64px 0;}
+  .phases{grid-template-columns:1fr;gap:30px;}
+  .phase,.phase+.phase{padding:0;border-left:0;}
+  .phase+.phase{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;}
+  .optional{grid-template-columns:1fr;gap:16px;}
+  .tag-opt{justify-self:start;}
+  .case{padding:28px 22px;}
+  .facts dl{grid-template-columns:82px 1fr;}
+  .metrics{grid-template-columns:1fr;}
+  .mark span.sub{display:none;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .rv{opacity:1;transform:none;transition:none;}
+  .rail-line i{transition:none;width:100%;}
+}
+@media print{
+  .topbar{position:static;}
+  .rv{opacity:1;transform:none;}
+  body{background:#fff;}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#top">Skip to main content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="mark" href="#top"><span class="dot" aria-hidden="true"></span>Renée Duncan <span class="sub">Contract project manager</span></a>
+    <nav class="navlinks" aria-label="Section navigation">
+      <a href="#delivery">My approach</a>
+      <a href="#work">Project portfolio</a>
+      <a href="#tools">Tools and capabilities</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-lead">
+      <p class="eyebrow">Project portfolio summary</p>
+      <h1>Contract project manager,<strong>learning experience design</strong></h1>
+      <p class="intro">I take learning experience design projects from the kickoff call to launch day, keeping the schedule, the quality standard, and everyone building it moving in the same direction.</p>
+      <div class="hero-meta">
+        <b>Renée Duncan</b>
+        Contract Project Manager, Learning Experience Design &nbsp;|&nbsp; Updated July 2026
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DELIVERY MODEL -->
+<section id="delivery">
+  <div class="wrap">
+    <div class="section-head rv">
+      <p class="eyebrow">How I run a project</p>
+      <h2>My approach</h2>
+      <p class="lede">Milestones give clients and stakeholders predictable checkpoints. Sprints inside development give the creative team room to iterate without renegotiating the schedule every week. Backlog Maintenance is added only when a program keeps living after launch.</p>
+    </div>
+
+    <div class="rail rv" id="rail">
+      <div class="rail-line" aria-hidden="true"><i></i></div>
+      <div class="phases">
+        <article class="phase">
+          <div class="num">01</div>
+          <h3>Discovery</h3>
+          <p>Audit existing content, interview stakeholders and top performers, confirm goals and audience, prototype to lock scope.</p>
+          <div class="out"><b>Deliverables</b>Approved scope, success criteria, milestone plan</div>
+        </article>
+        <article class="phase">
+          <div class="num">02</div>
+          <h3>Design</h3>
+          <p>Structure the learning experience, set templates and production standards, storyboard against the approved outcomes.</p>
+          <div class="out"><b>Deliverables</b>Approved design approach and prototype</div>
+        </article>
+        <article class="phase">
+          <div class="num">03</div>
+          <h3>Development</h3>
+          <p>Sprint-based production, workload monitoring across contributors, weekly status and dashboard updates.</p>
+          <div class="out"><b>Deliverables</b>Draft assets meeting the internal quality checklist</div>
+        </article>
+        <article class="phase">
+          <div class="num">04</div>
+          <h3>QA</h3>
+          <p>Staged quality assurance, SME and client review windows with defined turnaround expectations, compliance verification.</p>
+          <div class="out"><b>Deliverables</b>Signed-off content and a resolved feedback log</div>
+        </article>
+        <article class="phase">
+          <div class="num">05</div>
+          <h3>Delivery</h3>
+          <p>LMS build and testing, handover to the owning team, enablement, retrospective.</p>
+          <div class="out"><b>Deliverables</b>Live program, trained owners, documented lessons learned</div>
+        </article>
+      </div>
+
+      <div class="optional">
+        <div class="num">06</div>
+        <div>
+          <h3>Backlog maintenance</h3>
+          <p>Triage change requests after launch, prioritize content refreshes against a standing backlog, and run scoped update cycles so the program stays current without reopening the original project.</p>
+          <div class="out"><b>Deliverables</b>Prioritized backlog, agreed release cadence, refreshed content on a published schedule</div>
+          <div class="loopback">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M19 1v5a4 4 0 0 1-4 4H2" stroke="#CDB380" stroke-width="1.2" stroke-dasharray="3 3"/><path d="M6 6 1.5 10 6 14" stroke="#CDB380" stroke-width="1.2" fill="none"/></svg>
+            Returns to Development and QA for each scoped update cycle
+          </div>
+        </div>
+        <span class="tag-opt">Optional phase</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section id="work">
+  <div class="wrap">
+    <div class="section-head rv">
+      <p class="eyebrow eyebrow-dark">Selected engagements</p>
+      <h2>Project portfolio</h2>
+    </div>
+
+    <!-- 1 -->
+    <article class="case rv">
+      <div class="case-top">
+        <span class="case-num">01</span>
+        <h3>Train-the-trainer redesign and LMS launch</h3>
+      </div>
+      <p class="org">Wealthy Habits, a nonprofit financial literacy organization &nbsp;|&nbsp; Contract engagement</p>
+      <p class="problem">Every new cohort of trainers waited on the founder to deliver a week of live training. That limited how fast the organization could grow and left partner requests unanswered.</p>
+      <div class="case-body">
+        <div>
+          <div class="beat"><h4>What I did</h4><p>Ran a structured discovery phase against the existing lesson inventory, built a prototype to confirm scope before production began, and converted a 35 hour live curriculum into modular self-paced lessons with story-driven narratives written for a youth audience.</p></div>
+          <div class="beat"><h4>How I managed it</h4><p>Ten milestones with defined acceptance criteria, staged delivery in batches of 25, 50, 70, and 80 lessons, and review checkpoints for instructional quality, content sign-off, and final visual design.</p></div>
+          <div class="beat"><h4>Team coordination</h4><p>Directed volunteer student designers on first-draft production, routed polish work to a remote senior designer, and sent instructional review to a facilitation expert. Wrote the checklists and templates that kept output consistent across contributors with different skill levels.</p></div>
+          <div class="beat result"><h4>Result</h4><p>A self-paced program the founder no longer has to deliver personally, standardized materials with quizzes and mock-session assessments, and modular access so partners can pull individual topics without completing the full path.</p></div>
+        </div>
+        <div class="facts">
+          <dl>
+            <dt>Role</dt><dd>Project Manager and Lead Learning Experience Designer</dd>
+            <dt>Scope</dt><dd>80 lessons rebuilt into a self-paced train-the-trainer program with two learner paths</dd>
+            <dt>Timeline</dt><dd>December 2025 to March 2026, 10 milestones</dd>
+            <dt>Team</dt><dd>Client founder, instructional reviewer, final designer, and a rotating bench of student volunteer designers</dd>
+            <dt>Stack</dt><dd>LearnDash LMS, Canva, Google Vids, AI-assisted drafting</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="relevance">
+        <b>Why it transfers</b>
+        <p>Client-services delivery with a single decision maker, a creative production pipeline, story-driven content, hand-offs across Discovery, Design, Development, QA, and Delivery, and an LMS deployment at the end.</p>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="case rv">
+      <div class="case-top">
+        <span class="case-num">02</span>
+        <h3>Client advisory services CPE program</h3>
+      </div>
+      <p class="org">Association of International Certified Professional Accountants &nbsp;|&nbsp; Learning Product Development</p>
+      <p class="problem">Leadership set a fixed launch date and asked for 40 courses. The production math did not support it.</p>
+      <div class="case-body">
+        <div>
+          <div class="beat"><h4>What I did</h4><p>Reframed the request as a minimum viable cohort of 15 fully reviewed and compliant courses at launch, with the remaining courses sequenced into follow-on releases. Supported the recommendation with production capacity, review cycle length, and compliance turnaround figures.</p></div>
+          <div class="beat"><h4>How I managed it</h4><p>Alpha reviews focused on substance and structure, SME scheduling built around the QA bottleneck, and a risk register tracking the dependencies most likely to slip, primarily SME availability and compliance review capacity.</p></div>
+          <div class="beat result"><h4>Result</h4><p>A defensible launch scope, a stakeholder group aligned on what ships and when, and a release sequence that held the quality standard.</p></div>
+        </div>
+        <div class="facts">
+          <dl>
+            <dt>Role</dt><dd>Project Manager, Learning</dd>
+            <dt>Scope</dt><dd>40 course continuing professional education program for the client advisory services practice area</dd>
+            <dt>Limits</dt><dd>NASBA QAS compliance, verified learning objectives, seat time, and assessment rigor</dd>
+            <dt>Team</dt><dd>Learning experience designers, subject matter experts, content reviewers, compliance, production</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="relevance">
+        <b>Why it transfers</b>
+        <p>Managing expectations, negotiating priorities, and escalating early under a tight timeline, with quality standards enforced at every stage of production.</p>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="case rv">
+      <div class="case-top">
+        <span class="case-num">03</span>
+        <h3>Project management platform migration</h3>
+      </div>
+      <p class="org">Association of International Certified Professional Accountants &nbsp;|&nbsp; Learning Product Development</p>
+      <p class="problem">The team's working process had grown up around the old tool and was largely undocumented. Recovering it was the bulk of the work.</p>
+      <div class="case-body">
+        <div>
+          <div class="beat"><h4>What I did</h4><p>Audited existing boards and in-flight work, mapped the delivery workflow the team was using in practice, and rebuilt project structures, statuses, and request intake in the new platform to match it.</p></div>
+          <div class="beat"><h4>How I managed it</h4><p>Phased pilot with a defined cohort, adoption support and documentation built alongside the configuration, and success criteria agreed before migration began.</p></div>
+          <div class="beat result"><h4>Result</h4><p>A board structure the team can run projects in without workarounds, and a repeatable pattern for onboarding new project types.</p></div>
+        </div>
+        <div class="facts">
+          <dl>
+            <dt>Role</dt><dd>Project Manager and process lead</dd>
+            <dt>Scope</dt><dd>Migration of the learning product development team from Workfront to Jira and Confluence</dd>
+            <dt>Approach</dt><dd>90 day phased pilot ahead of full rollout</dd>
+            <dt>Team</dt><dd>Project managers, learning experience designers, production staff, platform administrators</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="relevance">
+        <b>Why it transfers</b>
+        <p>Taking over projects already in progress and rebuilding the boards running them, including request intake and status structures the team could use without workarounds.</p>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="case rv">
+      <div class="case-top">
+        <span class="case-num">04</span>
+        <h3>Property sales AI product launch</h3>
+      </div>
+      <p class="org">Left Main REI &nbsp;|&nbsp; Product and Knowledge Manager</p>
+      <p class="problem">An AI feature inside a real estate CRM that matched county property sales records against open leads and closed the ones already sold.</p>
+      <div class="case-body">
+        <div>
+          <div class="beat"><h4>What I did</h4><p>Led user research, built user journey maps and wireframe prototypes in Figma, wrote product requirements, defined success metrics, facilitated weekly design reviews and stakeholder alignment, and owned beta customer onboarding.</p></div>
+          <div class="beat"><h4>Learning and knowledge assets</h4><p>Produced job aids, knowledge articles, and a consolidated desk reference that served as the single source of truth for customers, support, and sales.</p></div>
+          <div class="beat"><h4>Risk handling</h4><p>Late in development we found no guardrail for reversing records the algorithm had closed in error. I worked with engineering on scenario planning and shipped a fix inside the existing deadline.</p></div>
+        </div>
+        <div class="facts">
+          <dl>
+            <dt>Role</dt><dd>Product and Knowledge Manager</dd>
+            <dt>Scope</dt><dd>Concept through beta and general availability for an AI-powered feature inside a Salesforce-based CRM</dd>
+            <dt>Timeline</dt><dd>Q3 2024 to Q1 2025</dd>
+            <dt>Team</dt><dd>Product, contract UX designer, engineering</dd>
+            <dt>Stack</dt><dd>Salesforce-based CRM, Figma, county property sales data sources</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="metrics">
+        <div class="metric"><div class="m-fig">28%</div><div class="m-cap">Reduction in wasted marketing and operations spend</div></div>
+        <div class="metric"><div class="m-fig">35%</div><div class="m-cap">Improvement in pipeline focus and conversion on qualified leads</div></div>
+        <div class="metric"><div class="m-fig">10+ hrs</div><div class="m-cap">Manual verification time recovered per week for beta users</div></div>
+        <div class="metric"><div class="m-fig">Validated</div><div class="m-cap">Product-market fit confirmed in Q4 2024 beta ahead of Q1 2025 general availability</div></div>
+      </div>
+      <div class="relevance">
+        <b>Why it transfers</b>
+        <p>Cross-functional coordination across design, engineering, and client stakeholders, with documentation and enablement scoped as delivery work.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="tools">
+  <div class="wrap">
+    <div class="section-head rv">
+      <p class="eyebrow">Tools and capabilities</p>
+      <h2>Where I already work</h2>
+    </div>
+    <div class="caps rv">
+      <div class="cap"><h3>Project and work management</h3><p>Jira, Confluence, Monday.com, ClickUp, Asana, Airtable, Teamwork, Workfront, SharePoint. I have configured boards, request intake, and status workflows in these, and taken over in-flight boards in several of them.</p></div>
+      <div class="cap"><h3>CRM and business systems</h3><p>Salesforce, including product ownership of an AI matching feature built inside a Salesforce-based CRM, and Airtable as a system of record for content inventories and delivery trackers.</p></div>
+      <div class="cap"><h3>Learning platforms</h3><p>LearnDash, SCORM-based enterprise LMS environments, NASBA QAS compliant course delivery.</p></div>
+      <div class="cap"><h3>Content production</h3><p>Camtasia, Canva, Adobe Premiere Pro, Google Vids, PowerPoint.</p></div>
+      <div class="cap"><h3>Design and prototyping</h3><p>Figma journey maps, wireframes, and prototypes.</p></div>
+      <div class="cap"><h3>AI-enabled workflows</h3><p>Claude and Microsoft Copilot for drafting, review acceleration, and knowledge base support, including an internal onboarding agent built for new project managers.</p></div>
+      <div class="cap"><h3>Methodology</h3><p>Agile and Scrum ceremonies, hybrid waterfall and agile delivery, backwards design, Kirkpatrick four-level evaluation, Google Project Management Certification.</p></div>
+    </div>
+    <div class="note rv">
+      <b>Portable across tools</b>
+      The pattern transfers whichever platform a team runs on. Audit what is already moving, map the workflow the team uses in practice rather than the one documented years ago, then rebuild structures, statuses, and intake to match. A new tool costs me days, not months.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-in">
+      <div>
+        <div class="name">Renée Duncan</div>
+        <div class="tag">Better learning. Faster outcomes.</div>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:renee@reneeduncan.com">renee@reneeduncan.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+    var r0 = document.getElementById('rail'); if (r0) r0.classList.add('is-lit');
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        if (e.target.id === 'rail') e.target.classList.add('is-lit');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  items.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
